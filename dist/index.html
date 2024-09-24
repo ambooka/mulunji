@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="manifest" href="data:application/json;base64,ewogICJzaG9ydF9uYW1lIjogIk1pbmltYWwgQXBwIiwKICAibmFtZSI6ICJSZWFjdCBNYXRlcmlhbCBNaW5pbWFsIFVJIEtpdCIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImZhdmljb24vYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgIH0sCiAgICB7CiAgICAgICJzcmMiOiAiZmF2aWNvbi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgfQogIF0sCiAgInN0YXJ0X3VybCI6ICIuIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAidGhlbWVfY29sb3IiOiAiIzAwMDAwMCIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIKfQo=" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon-eb6c62c2.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAbJJREFUOE/NkkFI1EEYxd+b/e9u62oIFmtbukRQRIGHsIMQdAs0IgoWOniwQ0kgEbTpQTDYU1J0kCIEicA6JJ6EDpGHrh6TCIQQb5ZS7Nr6b92deTH+LdqjePE7DfO9+c173wyxx+Iez2MfAobmts7TcFbQUlCJX36aZzj0Toep+ntACdFdmeg98PVv9IYIt96UD9lk8hOAIyAFqDh1LTl2c7b6imQ/nPzmYrop0T3Ry6qHNADy0+GUoRmAnBf65rohe5zwGUA8ggLOubG3/aliA+DEyMq5oBYuxFln7tRx0phtMYSatw4aQdoMDAsKWMqEiZnJ26ztOBDbCz8/2o31C7a0hvajbcrkOqLezq1+aYwG5++kJ/9/+m1RdqR0w8m8hqvD/vqBWLU83Hn65LCgNpKK4nAp15k602yRZbw6b4jmLZk+Zu6vpk2Q+iKZY4AI2YXV5daes12Vew4Yj2KIMcbyi6NNM5de/B4U9NzvkXjE7IPyVUdMR7Y0J2vufnvc8v3iQwUrduOlE68b6tly8WDBK7qfbHZUQvtBQksiMH3/ZhABoinvpvbhV96Nfa/9A2SZpn9s5eYnAAAAAElFTkSuQmCC" />
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABAtJREFUWEftVm1olWUYvu73fM5z4MzmhouUmovKbHOlEPhDCsRGGwvGJHPBxvqAOZESm+tDNvyxLaOUSklLpJjpIZiFU/PPIiiIFAbFaDD8Eau02ubxnJ3v81zxvu/OOe/ZOXMSiH/Ow+E8vO9zP/d93dd93Tev4C4vucvxUQRQZKDIwG0x0DlKrzOa+ECAHQAmFdBxuN75c6EWfv1CslUJBwHYoDhwqN5xGCJcrN2XBPCanyXxksQliGwCKaI7IwNKqY1HmtyTVsddI8lmKPoBakZQUv87+HGj643/DeDl4finAnakHVCEQgpERo8953w6/b7Dz3tszsQEgDI9cBqAvlP44vEm11AhELdkoP10rIk2Gc6MK92xsXRKKSDrT25zX9TftPlj/RDsy57Nh9MMJm4mtNS6oeZlUwtBLAqgxU+vIxkbB7BKz8LIY8FtAUaGXnA37DpP13QgNgViRY7JfBlMDXD41HZ3820DaP480q+JdIMQCIx6GnRmdaA/JzVKTUpkk1AdN+3S9gt3CjXZ+lWr+5IVREEGnh2KVsVnIuOBmYDTboOUVVZQE8naWjMjAgBKALqsdc/qQN0Qka9FoClideB+95bvnpJkGkRBAKt2X/WHA4EWFZ2Dis3B63Xx0ScfF5vTkWHCcJDWRBqQqQ/9Z9iJyK+wu7ecb5dr+kmLnyXhfwPukc7S2UUBrNw7u5nxyKiKhSQNgNEwlpf7sKauxiyBLgZTXLkJzJdoXjMRm1Or/fal3Fa9tQZaaKusunmZRC3jcxYAJhNr1q9Lenw+e4ZqI2GLNq2MCPu+3+XpW+p7IyeDyu7gqwSOmi2mwHiUJhNhMhaK3fvAfW3eshVf5tGfF4XTNt+yqh86JKgf9fZSu1YX32+3SScAT0rxLDRn19EGmc0AWL3vxvI4tAlQsq2kg0iEDQAqHh6Y/uyxNze8G7pA4hlDAmbFM8sYUuaYeOvKXm9/+mDHmegejXgvhzng3BfPuxsz9yu7A4cI2Z0ZJBm3CojHplIxeeSfIxWh9f1zG5OKPxlSyyrJbD8T0vVUqad6fKeE0seNJ6JjAtRkmTPMabcnyg0nK3uCa6E4BsBhXpqfdOauRNjw14DPmHj6evhA6ASJtoxDSxeISPtv+70nrVXZ/GF4jGRtTpsCdEiywgBQ2R28SHBrXimFYRId1wd9p61nVQMzPoQdPwJcm1MKkVNX+7ytZgLZVTcY2qOIg9a2FcHIWLe3UZ545bLjj7KH3hZyG4kHjfyBSQq+0ej46M/Bkt/zgAGo7gmWR4XvE2iCIKKJfFLx98SBK8c2JPLse6lVq9A7KWInAY+m4azHner6pac0K0LjUi81cxdVKOideLfk98CdCGr1WQRQZKDIwH/0ZAMS88VXFQAAAABJRU5ErkJggg==" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-80955a7d.png" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+
+    <script
+            src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+            crossorigin></script>
+
+    <script
+            src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+            crossorigin></script>
+
+    <script>var Alert = ReactBootstrap.Alert;</script>
+
+    <title>Mulunji Foundation</title>
+    <meta
+      name="description"
+      content="The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI ©, ready to be customized to your style"
+    />
+    <meta name="keywords" content="react,material,kit,application,dashboard,admin,template" />
+    <meta name="author" content="Minimal UI Kit" />
+    <script type="module" crossorigin src="/assets/index-72638cd3.js"></script>
+    <link rel="stylesheet" href="/assets/index-65727775.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script>
+      const global = globalThis;
+    </script>
+    
+  </body>
+</html>
