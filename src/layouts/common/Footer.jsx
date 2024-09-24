@@ -13,7 +13,7 @@ function Footer() {
 
             <div className="contact-image-wrap d-flex flex-wrap">
                     <img
-                        src="assets/logo.svg"
+                        src="assets/images/logo.svg"
                         width="24"
                         height="24"
                         sizes="100vw"
