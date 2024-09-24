@@ -180,7 +180,7 @@ export default function HomePage() {
               <div className="reveal">
                 <div>
                   <Typography align="left" variant="h1" sx={{ fontWeight: 'bold', color: '#333', fontSize: '3rem'}}>
-                    Join us in
+                    Joini us in
                   </Typography>
                   <b>
                     <div className="innerReveal" align="left">
