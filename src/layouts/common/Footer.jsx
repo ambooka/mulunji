@@ -1,4 +1,3 @@
-
 function Footer() {
   return (
     <footer className="site-footer">
@@ -13,7 +12,7 @@ function Footer() {
 
             <div className="contact-image-wrap d-flex flex-wrap">
                     <img
-                        src="assets/images/logo.svg"
+                        src="/assets/logo.svg"
                         width="24"
                         height="24"
                         sizes="100vw"

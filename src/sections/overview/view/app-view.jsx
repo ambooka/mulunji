@@ -172,7 +172,7 @@ export default function HomePage() {
 
           <Item>
             <Pane>
-              <Image src="assets/images/covers/cover_1.jpg" alt="Charity Work" />
+              <Image src="assets/images/cover_1.jpg" alt="Charity Work" />
             </Pane>
 
             {/* Content Section on the Right */}
