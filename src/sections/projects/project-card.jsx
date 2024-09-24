@@ -11,13 +11,10 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 import { fDate } from 'src/utils/format-time';
-import { fShortenNumber } from 'src/utils/format-number';
 
 import FullScreenPopup from 'src/layouts/FullScreenPopup';
 
 import SvgColor from 'src/components/svg-color';
-import img from "../../../assets/images/causes/group-african-kids-paying-attention-class.jpg";
-import img2 from "../../../assets/images/causes/poor-child-landfill-looks-forward-with-hope.jpg";
 import Iconify from "../../components/iconify";
 
 // ----------------------------------------------------------------------
